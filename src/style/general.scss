@@ -3,5 +3,12 @@
 
 body {
   // prova
-  background-color: lightblue;
+  background-color: $color-text-primary;
+  li {
+    list-style-type: none;
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
 }
