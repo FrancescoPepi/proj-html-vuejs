@@ -29,8 +29,16 @@ export default {
   <div class="bg py-5">
     <div class="container">
       <div class="row">
-        <div class="div">
-          <h1>{{ title.toUpperCase() }}</h1>
+        <div class="col-8">
+          <h1 class="title">Start Learning to Drive Today</h1>
+          <h3 class="font-weight-bold">
+            Give us a call to schedule your first driving lesson
+          </h3>
+        </div>
+        <div class="col-4">
+          <h3 class="font-weight-bold">
+            {{ store.phoneNumber }}
+          </h3>
         </div>
       </div>
     </div>
@@ -39,6 +47,12 @@ export default {
 
 <style lang="scss" scoped>
 .bg {
-  background-color: white;
+  background-image: url("/img/horizontal-cta-background.jpg");
+  background-position: center;
+  background-size: cover;
+  color: #f6f6f6;
+  .row {
+    align-items: center;
+  }
 }
 </style>

@@ -28,7 +28,7 @@ export default {
   <div class="bg py-5">
     <div class="container">
       <div class="row">
-        <div class="col my-5">
+        <div class="col-6 my-5">
           <h1 class="mb-5">Get Behind The Whell</h1>
           <h3 class="mb-3">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
@@ -41,7 +41,7 @@ export default {
             eveniet, ipsum libero minus.
           </h6>
         </div>
-        <div class="col my-5">
+        <div class="col-6 my-5">
           <div class="card-form p-5">
             <div class="card-text">
               <h2 class="mb-4">First Lesson Free!</h2>
@@ -104,6 +104,10 @@ export default {
 .bg {
   background-color: white;
   color: #494c4e;
+  .col-6 {
+    position: relative;
+    min-height: 400px;
+  }
   h2 {
     color: #7abc64;
   }
@@ -111,8 +115,8 @@ export default {
     background-color: white;
 
     text-align: center;
-    position: relative;
-    top: -23%;
+    position: absolute;
+    top: -40%;
     .form-control {
       background-color: #f7f7f7;
     }
