@@ -93,12 +93,13 @@ export default {
             <section class="links">
               <ul>
                 <li
-                  class="px-4"
+                  class="px-3"
                   v-for="(link, index) in links"
                   :key="link.id"
                   @click="active(index)"
+                  :class="link.active ? 'active' : ''"
                 >
-                  <a :class="link.active ? 'active' : ''" :href="link.url">
+                  <a :href="link.url">
                     {{ link.name }}
                   </a>
                   <span v-if="link.new" class="badge new">NEW</span>
@@ -129,40 +130,45 @@ header {
 }
 .bg-top {
   background-color: #353637;
-  font-size: 0.75rem;
+  font-size: 0.6rem;
 }
 .bg-bottom {
   background-color: #494c4ea2;
 }
-.container {
-  .header-top {
-    color: #929aa3;
-    height: 50px;
+
+.header-top {
+  color: #929aa3;
+  height: 50px;
+  @include flex();
+}
+.header-bottom {
+  color: #f6f6f6;
+  height: 100px;
+  @include flex();
+  .links {
     @include flex();
-  }
-  .header-bottom {
-    color: #f6f6f6;
-    height: 100px;
-    @include flex();
-    .links {
+    & ul {
       @include flex();
-      & ul {
-        @include flex();
-        margin: 0;
-      }
+      margin: 0;
     }
   }
-  .header-bottom {
-    @include flex();
-  }
-  .new {
-    margin-left: 3px;
-    background-color: #7abc64;
-  }
-  .active {
+}
+.header-bottom {
+  @include flex();
+}
+.new {
+  margin-left: 3px;
+  background-color: #7abc64;
+}
+.active {
+  & a {
     color: #7abc64;
-    &::after {
-    }
+  }
+  &::after {
+    content: "";
+    box-shadow: 0 4px 0px 1px #7abc64;
+    width: 100%;
+    display: block;
   }
 }
 </style>
