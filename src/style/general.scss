@@ -11,4 +11,14 @@ body {
       color: white;
     }
   }
+  .btn-green {
+    background-color: $bg-color-green;
+    color: $bg-color-cream;
+    border-radius: 50px;
+    &:hover {
+      background-color: transparent;
+      box-shadow: inset 0px 0px 0px 3px $bg-color-green;
+      color: $bg-color-green;
+    }
+  }
 }

@@ -1,6 +1,6 @@
 <script>
-// import HeaderComponent from "./components/Header.vue";
 import { store } from "../data/store.js";
+import AppHero from "./subComponentHeader/AppHero.vue";
 
 export default {
   data() {
@@ -54,65 +54,69 @@ export default {
       ],
     };
   },
-
-  // 	methods:{
-  // 		myMethods(){
-  // 			...
-  // 		},
-  // 	},
-
-  // components: {
-  //	MyComponent,
-  // },
-
-  // 	props:{
-  // 		passaggioInfo: stringa,
-  //  	 },
+  components: {
+    AppHero,
+  },
 };
 </script>
 
 <template>
-  <div class="bg-top">
-    <div class="container">
-      <div class="header-top">
-        <div>We have a 95% Successful Pass Rate!</div>
-        <div>Give us a call to book your tuition!{{ store.phoneNumber }}</div>
+  <header>
+    <div class="bg-top">
+      <div class="container">
+        <div class="row">
+          <div class="header-top">
+            <div>We have a 95% Successful Pass Rate!</div>
+            <div>
+              Give us a call to book your tuition!{{ store.phoneNumber }}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="bg-bottom">
-    <div class="container">
-      <div class="header-bottom">
-        <section>
-          <img :src="img" alt="Logo" />
-        </section>
-        <section class="d-flex">
-          <ul class="d-flex">
-            <li class="p-2" v-for="link in links" :key="link.id">
-              <a :class="link.active ? 'active' : ''" :href="link.url">
-                {{ link.name }}
-              </a>
-              <span v-if="link.new" class="badge new">NEW</span>
-            </li>
-          </ul>
-          <button type="button" class="btn btn-primary">BOOK NOW</button>
-        </section>
+    <div class="bg-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="header-bottom">
+            <section>
+              <img :src="img" alt="Logo" />
+            </section>
+            <section class="links">
+              <ul>
+                <li class="px-4" v-for="link in links" :key="link.id">
+                  <a :class="link.active ? 'active' : ''" :href="link.url">
+                    {{ link.name }}
+                  </a>
+                  <span v-if="link.new" class="badge new">NEW</span>
+                </li>
+              </ul>
+              <button type="button" class="btn btn-green">BOOK NOW</button>
+            </section>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+  </header>
+
+  <AppHero />
 </template>
 
 <style lang="scss" scoped>
 // MIXINS
 @use "../style/subStyle/mixins.scss" as *;
+// VARIABLE
 @use "../style/subStyle/variable.scss" as *;
 
+header {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
 .bg-top {
   background-color: #494c4e;
 }
 .bg-bottom {
-  background-color: #000000;
-  opacity: 40%;
+  background-color: #494c4ea2;
 }
 .container {
   .header-top {
@@ -124,6 +128,13 @@ export default {
     color: #f6f6f6;
     height: 100px;
     @include flex();
+    .links {
+      @include flex();
+      & ul {
+        @include flex();
+        margin: 0;
+      }
+    }
   }
   .header-bottom {
     @include flex();
