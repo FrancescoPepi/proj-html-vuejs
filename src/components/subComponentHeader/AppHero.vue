@@ -47,6 +47,11 @@ export default {
     .row {
       height: 100%;
       align-content: center;
+      h1 {
+        font-size: 60px;
+        font-weight: 900;
+        text
+      }
     }
   }
 }

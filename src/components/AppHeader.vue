@@ -54,6 +54,15 @@ export default {
       ],
     };
   },
+  methods: {
+    active(index) {
+      for (const link in this.links) {
+        link == index
+          ? (this.links[link].active = true)
+          : (this.links[link].active = false);
+      }
+    },
+  },
   components: {
     AppHero,
   },
@@ -83,7 +92,12 @@ export default {
             </section>
             <section class="links">
               <ul>
-                <li class="px-4" v-for="link in links" :key="link.id">
+                <li
+                  class="px-4"
+                  v-for="(link, index) in links"
+                  :key="link.id"
+                  @click="active(index)"
+                >
                   <a :class="link.active ? 'active' : ''" :href="link.url">
                     {{ link.name }}
                   </a>
@@ -108,12 +122,14 @@ export default {
 @use "../style/subStyle/variable.scss" as *;
 
 header {
+  font-weight: 900;
   position: absolute;
   left: 0;
   right: 0;
 }
 .bg-top {
-  background-color: #494c4e;
+  background-color: #353637;
+  font-size: 0.75rem;
 }
 .bg-bottom {
   background-color: #494c4ea2;
