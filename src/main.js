@@ -15,8 +15,26 @@ import "./style/general.scss";
 import "./style/subStyle/variable.scss";
 
 // FONTAWSOME
-// import { library } from "@fortawesome/fontawesome-svg-core";
-// import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-// import { faStar, faSpinner } from "@fortawesome/free-solid-svg-icons";
-// library.add(faStar, faSpinner);
-// app.component("font-awesome-icon", FontAwesomeIcon);
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { faCircle as faCircleS } from "@fortawesome/free-solid-svg-icons";
+import {
+  faFacebookF,
+  faTwitter,
+  faYoutube,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons";
+import {
+  faCircle as faCircleR,
+  faCopyright,
+} from "@fortawesome/free-regular-svg-icons";
+library.add(
+  faCircleS,
+  faCircleR,
+  faCopyright,
+  faFacebookF,
+  faTwitter,
+  faYoutube,
+  faInstagram
+);
+app.component("font-awesome-icon", FontAwesomeIcon);

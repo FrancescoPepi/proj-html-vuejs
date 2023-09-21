@@ -3,23 +3,14 @@ export default {
   data() {
     return {
       title: "titolo",
-      socials: ["F", "X", "Y", "I"],
+      socials: [
+        "fa-brands fa-facebook-f",
+        "fa-brands fa-twitter",
+        "fa-brands fa-youtube",
+        "fa-brands fa-instagram",
+      ],
     };
   },
-
-  // 	methods:{
-  // 		myMethods(){
-  // 			...
-  // 		},
-  // 	},
-
-  // components: {
-  //	MyComponent,
-  // },
-
-  // 	props:{
-  // 		passaggioInfo: stringa,
-  //  	 },
 };
 </script>
 
@@ -29,11 +20,14 @@ export default {
       <div class="row">
         <div class="footer-bottom">
           <div class="copyright">
+            <font-awesome-icon icon="fa-regular fa-copyright" />
             Copyright 2012 - 2020 | Acada Thene by <a href="#">ThemeFusion</a> |
             All Rights Reserved | Powered by <a href="#">WordPress</a>
           </div>
-          <div>
-            <span v-for="social in socials" class="px-3">{{ social }}</span>
+          <div class="d-flex">
+            <div v-for="social in socials" class="px-3">
+              <font-awesome-icon :icon="social" size="xl" />
+            </div>
           </div>
         </div>
       </div>
@@ -49,6 +43,9 @@ export default {
   background-color: #1c1d1e;
   color: #929aa3;
   font-size: 0.7rem;
+  .box {
+    color: white;
+  }
   .container {
     line-height: 150px;
   }

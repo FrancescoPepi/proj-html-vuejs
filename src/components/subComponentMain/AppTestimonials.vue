@@ -6,14 +6,18 @@ export default {
     return {
       store,
       title: "Testimonials",
+      slideActive: 0,
     };
   },
 
-  // 	methods:{
-  // 		myMethods(){
-  // 			...
-  // 		},
-  // 	},
+  methods: {
+    carousel(index) {
+      setInterval(() => {
+        store.testimonials[index].active = true;
+        console.log((store.testimonials[index].active = true));
+      }, 2000);
+    },
+  },
 
   // components: {
   //	MyComponent,
@@ -41,7 +45,8 @@ export default {
         </div>
         <div class="col-10 mx-auto">
           <div
-            v-for="testimonial in store.testimonials"
+            @mouseout="carousel(index)"
+            v-for="(testimonial, index) in store.testimonials"
             class="testimonials-card text-center"
             :class="testimonial.active ? '' : 'd-none'"
           >
@@ -64,6 +69,16 @@ export default {
             </div>
           </div>
         </div>
+        <div class="d-flex pointer">
+          <div class="p-1" v-for="testimonial in store.testimonials">
+            <font-awesome-icon
+              v-if="testimonial.active"
+              icon="fa-solid fa-circle"
+            />
+
+            <font-awesome-icon v-else icon="fa-regular fa-circle" />
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -74,9 +89,14 @@ export default {
   background-image: url("/img/testimonial-background.jpg");
   background-size: cover;
   background-position: center;
-  height: 800px;
+  height: 900px;
   color: #929aa3;
-
+  .pointer {
+    justify-content: center;
+    transition: all 0.3s ease-in;
+    position: relative;
+    bottom: 50px;
+  }
   .col-10 {
     height: 550px;
     position: relative;
