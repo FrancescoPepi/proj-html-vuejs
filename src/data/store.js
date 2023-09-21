@@ -53,4 +53,52 @@ export const store = reactive({
       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     },
   ],
+  testimonials: [
+    {
+      img: "/img/testimonial-sophia.png",
+      text: "Avada Driving School really helped build my confidence behind the wheel and with driving in general, and they got me a first time pass! highly recommended.",
+      name: "Sophia Jones",
+      active: true,
+    },
+    {
+      img: "/img/testimonial-kelly.png",
+      text: "Everything is perfect, fast and reliable, the price is right and above all everything is done online obviously without a medical examination which takes place on site. I recommend it to everyone who needs to renew their driving licence.",
+      name: "Kelly Smith",
+      active: false,
+    },
+    {
+      img: "/img/testimonial-kate.png",
+      text: "I'm very satisfied. The license renewal service was quick, the staff very efficient, kind and helpful. I really recommend this agency!",
+      name: "Kate Hart",
+      active: false,
+    },
+    {
+      img: "/img/testimonial-harold.png",
+      text: "I describe my experience with three words: professionalism, punctuality and courtesy. The next renewal will definitely be with you!",
+      name: "Harold Hart",
+      active: false,
+    },
+    {
+      img: "/img/testimonial-grant.png",
+      text: "Everything well organised, punctual and with the online service you don't waste time. The cost is excellent",
+      name: "Grant Hart",
+      active: false,
+    },
+  ],
+  latestNews: [
+    {
+      img: "/img/blog-choosecar-700x441.jpg",
+      title: "What Car to Start With?",
+      data: "February 7th, 2019",
+      comment: "0 Comments",
+      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    },
+    {
+      img: "/img/blogpost-10and2-700x441.jpg",
+      title: "Avada Driving School Expanding",
+      data: "February 7th, 2019",
+      comment: "0 Comments",
+      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    },
+  ],
 });

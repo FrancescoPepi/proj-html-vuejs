@@ -51,6 +51,9 @@ export default {
   background-position: center;
   background-size: cover;
   color: #f6f6f6;
+  .title {
+    color: #f6f6f6;
+  }
   .row {
     align-items: center;
   }

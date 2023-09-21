@@ -3,6 +3,8 @@ import AppPromoter from "./subComponentMain/AppPromoter.vue";
 import AppCall from "./subComponentMain/AppCall.vue";
 import AppCourses from "./subComponentMain/AppCourses.vue";
 import AppInstructors from "./subComponentMain/AppInstructors.vue";
+import AppTestimonials from "./subComponentMain/AppTestimonials.vue";
+import AppNews from "./subComponentMain/AppNews.vue";
 
 export default {
   data() {
@@ -22,6 +24,8 @@ export default {
     AppCall,
     AppCourses,
     AppInstructors,
+    AppTestimonials,
+    AppNews,
   },
 
   // 	props:{
@@ -36,6 +40,8 @@ export default {
   <AppCall />
   <AppCourses />
   <AppInstructors />
+  <AppTestimonials />
+  <AppNews />
 </template>
 
 <style lang="scss" scoped></style>
