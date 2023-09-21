@@ -70,7 +70,7 @@ export default {
           <div
             v-for="(testimonial, index) in store.testimonials"
             class="testimonials-card text-center"
-            :class="testimonial.active ? '' : 'd-none'"
+            :class="testimonial.active ? 'o-100' : 'o-0'"
           >
             <div class="w-25 mx-auto my-5">
               <img
@@ -113,6 +113,14 @@ export default {
   background-position: center;
   height: 900px;
   color: #929aa3;
+  .o-0 {
+    opacity: 0%;
+    transition: all 0.5s ease-in-out;
+  }
+  .o-100 {
+    opacity: 100%;
+    transition: all 0.5s ease-in-out;
+  }
   .pointer {
     justify-content: center;
     transition: all 0.3s ease-in;

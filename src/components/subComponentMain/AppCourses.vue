@@ -11,12 +11,6 @@ export default {
     };
   },
 
-  // 	methods:{
-  // 		myMethods(){
-  // 			...
-  // 		},
-  // 	},
-
   components: {
     CircleProgress,
   },
@@ -102,6 +96,9 @@ export default {
 <style lang="scss" scoped>
 .bg {
   position: relative;
+  .ciao {
+    transition: width 0.5s linear;
+  }
   // background-color: white;
   &::before {
     content: "";
