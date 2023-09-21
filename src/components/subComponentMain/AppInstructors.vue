@@ -6,14 +6,20 @@ export default {
     return {
       store,
       title: "Instructors",
+      cardActive: 1,
     };
   },
 
-  // 	methods:{
-  // 		myMethods(){
-  // 			...
-  // 		},
-  // 	},
+  methods: {
+    active(index) {
+      this.cardActive = index;
+      for (const i in store.instructorsCards) {
+        i == index
+          ? (store.instructorsCards[i].active = true)
+          : (store.instructorsCards[i].active = false);
+      }
+    },
+  },
 
   // components: {
   //	MyComponent,
@@ -43,8 +49,12 @@ export default {
         </div>
         <div class="col-12">
           <div class="row">
-            <div v-for="instructor in store.instructorsCards" class="col px-1">
-              <div class="card-info p-5">
+            <div
+              :class="instructor.active ? 'active' : ''"
+              v-for="(instructor, index) in store.instructorsCards"
+              class="col px-1"
+            >
+              <div @mouseenter="active(index)" class="card-info p-5">
                 <img class="w-100" :src="instructor.img" alt="" />
                 <h2 class="mt-5 fw-bold">{{ instructor.name }}</h2>
                 <p>
@@ -72,6 +82,16 @@ export default {
     .btn {
       width: 100%;
     }
+  }
+  .col-12 {
+    position: relative;
+    bottom: -110px;
+  }
+  .col {
+    transition: all 0.15s ease-in;
+  }
+  .active {
+    transform: translateY(10px);
   }
 }
 </style>

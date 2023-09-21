@@ -39,18 +39,21 @@ export const store = reactive({
       name: "Mike Hart",
       socials: ["F", "X", "I"],
       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      active: false,
     },
     {
       img: "/img/instructor-johnsmith.jpg",
       name: "John Smith",
       socials: ["F", "X", "I"],
       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      active: true,
     },
     {
       img: "/img/instructor-angelahart.jpg",
       name: "Angela Hart",
       socials: ["F", "X", "I"],
       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      active: false,
     },
   ],
   testimonials: [

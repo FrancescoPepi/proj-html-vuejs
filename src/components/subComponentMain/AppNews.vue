@@ -36,9 +36,9 @@ export default {
                   <div>
                     <img class="w-100" :src="news.img" alt="" />
                   </div>
-                  <div class="card-txt my-4">
+                  <div class="card-text my-4">
                     <div>
-                      <h3>{{ news.title }}</h3>
+                      <h3 class="fw-bold">{{ news.title }}</h3>
                     </div>
                     <div>
                       <span>{{ news.data }}</span>
@@ -46,7 +46,11 @@ export default {
                       <span>{{ news.comment }}</span>
                     </div>
                   </div>
-                  <div>{{ news.text }}</div>
+                  <div>
+                    <h6>
+                      {{ news.text }}
+                    </h6>
+                  </div>
                 </div>
               </div>
             </div>
@@ -65,14 +69,20 @@ export default {
   background-size: cover;
   background-position: center;
 
-  .card-info {
-    box-shadow: inset 0px 7px 0px 0px #7799ad, 0px 12px 20px 0px #00000040;
-  }
   .col-12 {
     .card-info {
       top: -15%;
       border-bottom-left-radius: 0%;
       border-bottom-right-radius: 0%;
+      box-shadow: inset 0px 7px 0px 0px #7799ad, 0px 12px 20px 0px #00000040;
+      .card-text {
+        font-size: 0.8rem;
+        h3,
+        span:nth-child(3) {
+          color: #7abc64;
+        }
+      }
+
       &::after {
         content: "";
         display: block;

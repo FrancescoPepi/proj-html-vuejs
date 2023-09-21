@@ -1,5 +1,6 @@
 <script>
-// import HeaderComponent from "./components/Header.vue";
+import AppFooterTop from "./subComponentsFooter/AppFooterTop.vue";
+import AppFooterBottom from "./subComponentsFooter/AppFooterBottom.vue";
 
 export default {
   data() {
@@ -14,9 +15,10 @@ export default {
   // 		},
   // 	},
 
-  // components: {
-  //	MyComponent,
-  // },
+  components: {
+    AppFooterTop,
+    AppFooterBottom,
+  },
 
   // 	props:{
   // 		passaggioInfo: stringa,
@@ -24,6 +26,9 @@ export default {
 };
 </script>
 
-<template></template>
+<template>
+  <AppFooterTop />
+  <AppFooterBottom />
+</template>
 
 <style lang="scss" scoped></style>

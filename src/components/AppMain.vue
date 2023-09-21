@@ -5,6 +5,7 @@ import AppCourses from "./subComponentMain/AppCourses.vue";
 import AppInstructors from "./subComponentMain/AppInstructors.vue";
 import AppTestimonials from "./subComponentMain/AppTestimonials.vue";
 import AppNews from "./subComponentMain/AppNews.vue";
+import AppNewsLetter from "./subComponentMain/AppNewsLetter.vue";
 
 export default {
   data() {
@@ -26,6 +27,7 @@ export default {
     AppInstructors,
     AppTestimonials,
     AppNews,
+    AppNewsLetter,
   },
 
   // 	props:{
@@ -42,6 +44,7 @@ export default {
   <AppInstructors />
   <AppTestimonials />
   <AppNews />
+  <AppNewsLetter />
 </template>
 
 <style lang="scss" scoped></style>
