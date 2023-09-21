@@ -1,7 +1,5 @@
 import { createApp } from "vue";
 import App from "./App.vue";
-const app = createApp(App);
-app.mount("#app");
 
 // ADD BOOTSTRAP
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -37,4 +35,7 @@ library.add(
   faYoutube,
   faInstagram
 );
+
+const app = createApp(App);
 app.component("font-awesome-icon", FontAwesomeIcon);
+app.mount("#app");
