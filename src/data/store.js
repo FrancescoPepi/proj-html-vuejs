@@ -33,4 +33,24 @@ export const store = reactive({
       name: "accident rate",
     },
   ],
+  instructorsCards: [
+    {
+      img: "/img/instructor-mikehart.jpg",
+      name: "Mike Hart",
+      socials: ["F", "X", "I"],
+      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    },
+    {
+      img: "/img/instructor-johnsmith.jpg",
+      name: "John Smith",
+      socials: ["F", "X", "I"],
+      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    },
+    {
+      img: "/img/instructor-angelahart.jpg",
+      name: "Angela Hart",
+      socials: ["F", "X", "I"],
+      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    },
+  ],
 });

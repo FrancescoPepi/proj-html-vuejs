@@ -29,7 +29,7 @@ export default {
     <div class="container">
       <div class="row">
         <div class="col-6 my-5">
-          <h1 class="mb-5">Get Behind The Whell</h1>
+          <h1 class="title mb-5">Get Behind The Whell</h1>
           <h3 class="mb-3">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
             laborum, dolor officia repudiandae sint quae?
@@ -120,10 +120,6 @@ export default {
     label {
       color: #929aa3;
     }
-  }
-
-  h1 {
-    font-weight: 600;
   }
 }
 </style>

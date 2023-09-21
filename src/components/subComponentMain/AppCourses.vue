@@ -60,35 +60,37 @@ export default {
           </div>
         </div>
         <!-- CARD INFORMATION -->
-        <div class="col-12 d-flex">
-          <div v-for="info in store.coursesInfo" class="col mx-2">
-            <div class="card-info p-5">
-              <div class="progress-bar">
-                <circle-progress
-                  v-if="parseInt(info.rate) != 0"
-                  :is-gradient="true"
-                  :percent="parseInt(info.rate)"
-                  :border-width="7"
-                  :border-bg-width="7"
-                  :gradient="{
-                    startColor: '#7abc64',
-                    stopColor: '#7abc64',
-                  }"
-                />
-                <circle-progress
-                  v-else
-                  :is-gradient="true"
-                  :percent="parseInt(info.rate) + 0.5"
-                  :border-width="7"
-                  :border-bg-width="7"
-                  :gradient="{
-                    startColor: '#7abc64',
-                    stopColor: '#7abc64',
-                  }"
-                />
-                <div class="rate">{{ info.rate }}</div>
+        <div class="col-12">
+          <div class="row">
+            <div v-for="info in store.coursesInfo" class="col px-1">
+              <div class="card-info p-5">
+                <div class="progress-bar">
+                  <circle-progress
+                    v-if="parseInt(info.rate) != 0"
+                    :is-gradient="true"
+                    :percent="parseInt(info.rate)"
+                    :border-width="7"
+                    :border-bg-width="7"
+                    :gradient="{
+                      startColor: '#7abc64',
+                      stopColor: '#7abc64',
+                    }"
+                  />
+                  <circle-progress
+                    v-else
+                    :is-gradient="true"
+                    :percent="parseInt(info.rate) + 0.5"
+                    :border-width="7"
+                    :border-bg-width="7"
+                    :gradient="{
+                      startColor: '#7abc64',
+                      stopColor: '#7abc64',
+                    }"
+                  />
+                  <div class="rate">{{ info.rate }}</div>
+                </div>
+                <div class="mt-5 fw-bold">{{ info.name.toUpperCase() }}</div>
               </div>
-              <div class="mt-5 fw-bold">{{ info.name.toUpperCase() }}</div>
             </div>
           </div>
         </div>
@@ -104,7 +106,7 @@ export default {
   &::before {
     content: "";
     // image triangolare
-    clip-path: polygon(0% 0%, 230% 0%, 50% 100%, 0% 70%);
+    clip-path: polygon(0% 0%, 230% 50%, 50% 100%, -60% 70%);
     height: 600px;
     background-image: url("/img/promise-background.jpg");
     background-size: cover;
