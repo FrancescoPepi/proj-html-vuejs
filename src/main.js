@@ -18,6 +18,8 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import {
   faCircle as faCircleS,
   faPhone,
+  faHouse,
+  faLink,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebookF,
@@ -28,6 +30,8 @@ import {
 import {
   faCircle as faCircleR,
   faCopyright,
+  faEnvelope,
+  faCircleRight,
 } from "@fortawesome/free-regular-svg-icons";
 library.add(
   faCircleS,
@@ -37,7 +41,11 @@ library.add(
   faTwitter,
   faYoutube,
   faInstagram,
-  faPhone
+  faPhone,
+  faHouse,
+  faLink,
+  faEnvelope,
+  faCircleRight
 );
 
 const app = createApp(App);

@@ -7,7 +7,6 @@ export default {
     return {
       store,
       title: "HEADER",
-      img: "/img/avada-drivers-logo-1x.png",
       links: [
         {
           id: 1,
@@ -89,7 +88,7 @@ export default {
         <div class="row">
           <div class="header-bottom">
             <section>
-              <img :src="img" alt="Logo" />
+              <img :src="store.logo" alt="Logo" />
             </section>
             <section class="links">
               <ul>

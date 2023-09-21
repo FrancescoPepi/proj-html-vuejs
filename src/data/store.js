@@ -2,6 +2,7 @@ import { reactive } from "vue";
 
 export const store = reactive({
   phoneNumber: "1-800-555-555",
+  logo: "/img/avada-drivers-logo-1x.png",
   courses: [
     {
       img: "/img/courses-passplus.jpg",
@@ -114,6 +115,50 @@ export const store = reactive({
       data: "February 7th, 2019",
       comment: "0 Comments",
       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    },
+  ],
+  footer: [
+    {
+      title: "contact details",
+      links: [
+        {
+          icon: "fa-solid fa-house",
+          text: "12345 North Main Street New York, NY 555555",
+        },
+        {
+          icon: "fa-solid fa-phone",
+          text: "1-800-555-555",
+        },
+        {
+          icon: "fa-regular fa-envelope",
+          text: "info@your-domain.com",
+        },
+        {
+          icon: "fa-solid fa-link",
+          text: "Theme-Fusion.com",
+        },
+      ],
+    },
+    {
+      title: "courses",
+      links: [
+        {
+          icon: "fa-regular fa-circle-right",
+          text: "Pass Plus",
+        },
+        {
+          icon: "fa-regular fa-circle-right",
+          text: "Intensive Course",
+        },
+        {
+          icon: "fa-regular fa-circle-right",
+          text: "Automatic",
+        },
+        {
+          icon: "fa-regular fa-circle-right",
+          text: "Instructor Traning",
+        },
+      ],
     },
   ],
 });

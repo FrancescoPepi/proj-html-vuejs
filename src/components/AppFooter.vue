@@ -27,7 +27,7 @@ export default {
 </script>
 
 <template>
-  <!-- <AppFooterTop /> -->
+  <AppFooterTop />
   <AppFooterBottom />
 </template>
 
