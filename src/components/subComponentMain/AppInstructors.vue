@@ -58,9 +58,9 @@ export default {
                 <img class="w-100" :src="instructor.img" alt="" />
                 <h2 class="mt-5 fw-bold">{{ instructor.name }}</h2>
                 <p>
-                  <span class="px-2" v-for="social in instructor.socials">{{
-                    social
-                  }}</span>
+                  <span class="px-2" v-for="social in instructor.socials">
+                    <font-awesome-icon :icon="social" />
+                  </span>
                 </p>
                 <p>{{ instructor.text }}</p>
               </div>

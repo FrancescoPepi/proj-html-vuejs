@@ -25,7 +25,7 @@ export default {
             All Rights Reserved | Powered by <a href="#">WordPress</a>
           </div>
           <div class="d-flex">
-            <div v-for="social in socials" class="px-3">
+            <div v-for="social in socials" class="box px-3">
               <font-awesome-icon :icon="social" size="xl" />
             </div>
           </div>

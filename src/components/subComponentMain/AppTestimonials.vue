@@ -7,15 +7,31 @@ export default {
       store,
       title: "Testimonials",
       slideActive: 0,
+      prova: null,
+      timer: true,
     };
   },
 
   methods: {
+    onTimer() {
+      // this.timer = !this.timer;
+      clearInterval(this.prova);
+    },
     carousel(index) {
-      setInterval(() => {
-        store.testimonials[index].active = true;
-        console.log((store.testimonials[index].active = true));
-      }, 2000);
+      this.slideActive = index;
+      if (this.timer) {
+        this.prova = setInterval(() => {
+          if (this.slideActive == store.testimonials.length - 1) {
+            store.testimonials[this.slideActive].active = false;
+            this.slideActive = 0;
+            store.testimonials[this.slideActive].active = true;
+          } else {
+            store.testimonials[this.slideActive].active = false;
+            this.slideActive++;
+            store.testimonials[this.slideActive].active = true;
+          }
+        }, 4000);
+      }
     },
   },
 
@@ -26,6 +42,9 @@ export default {
   // 	props:{
   // 		passaggioInfo: stringa,
   //  	 },
+  mounted() {
+    this.carousel(this.slideActive);
+  },
 };
 </script>
 
@@ -43,9 +62,12 @@ export default {
             </h4>
           </div>
         </div>
-        <div class="col-10 mx-auto">
+        <div
+          class="col-10 mx-auto"
+          @mouseenter="onTimer()"
+          @mouseleave="carousel(slideActive)"
+        >
           <div
-            @mouseout="carousel(index)"
             v-for="(testimonial, index) in store.testimonials"
             class="testimonials-card text-center"
             :class="testimonial.active ? '' : 'd-none'"

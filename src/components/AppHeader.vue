@@ -77,7 +77,8 @@ export default {
           <div class="header-top">
             <div>We have a 95% Successful Pass Rate!</div>
             <div>
-              Give us a call to book your tuition!{{ store.phoneNumber }}
+              <font-awesome-icon icon="fa-solid fa-phone" flip="horizontal" />
+              Give us a call to book your tuition! {{ store.phoneNumber }}
             </div>
           </div>
         </div>

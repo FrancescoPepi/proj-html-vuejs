@@ -37,21 +37,33 @@ export const store = reactive({
     {
       img: "/img/instructor-mikehart.jpg",
       name: "Mike Hart",
-      socials: ["F", "X", "I"],
+      socials: [
+        "fa-brands fa-facebook-f",
+        "fa-brands fa-twitter",
+        "fa-brands fa-instagram",
+      ],
       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
       active: false,
     },
     {
       img: "/img/instructor-johnsmith.jpg",
       name: "John Smith",
-      socials: ["F", "X", "I"],
+      socials: [
+        "fa-brands fa-facebook-f",
+        "fa-brands fa-twitter",
+        "fa-brands fa-instagram",
+      ],
       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
       active: true,
     },
     {
       img: "/img/instructor-angelahart.jpg",
       name: "Angela Hart",
-      socials: ["F", "X", "I"],
+      socials: [
+        "fa-brands fa-facebook-f",
+        "fa-brands fa-twitter",
+        "fa-brands fa-instagram",
+      ],
       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
       active: false,
     },

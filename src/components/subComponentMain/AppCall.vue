@@ -37,6 +37,7 @@ export default {
         </div>
         <div class="col-4">
           <h3 class="font-weight-bold">
+            <font-awesome-icon icon="fa-solid fa-phone" flip="horizontal" />
             {{ store.phoneNumber }}
           </h3>
         </div>

@@ -15,7 +15,10 @@ import "./style/subStyle/variable.scss";
 // FONTAWSOME
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import { faCircle as faCircleS } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCircle as faCircleS,
+  faPhone,
+} from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebookF,
   faTwitter,
@@ -33,7 +36,8 @@ library.add(
   faFacebookF,
   faTwitter,
   faYoutube,
-  faInstagram
+  faInstagram,
+  faPhone
 );
 
 const app = createApp(App);
