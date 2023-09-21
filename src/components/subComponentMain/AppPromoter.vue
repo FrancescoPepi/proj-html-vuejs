@@ -112,9 +112,6 @@ export default {
     color: #7abc64;
   }
   .card-form {
-    background-color: white;
-
-    text-align: center;
     position: absolute;
     top: -40%;
     .form-control {

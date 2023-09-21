@@ -7,6 +7,9 @@ app.mount("#app");
 import "bootstrap/dist/css/bootstrap.min.css";
 import * as bootstrap from "bootstrap";
 
+// ADD CIRCLE
+import "vue3-circle-progress/dist/circle-progress.css";
+
 // ADD SCSS
 import "./style/general.scss";
 import "./style/subStyle/variable.scss";
