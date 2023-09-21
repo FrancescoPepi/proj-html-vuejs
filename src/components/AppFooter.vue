@@ -16,7 +16,7 @@ export default {
   // 	},
 
   components: {
-    // AppFooterTop,
+    AppFooterTop,
     AppFooterBottom,
   },
 
@@ -27,7 +27,7 @@ export default {
 </script>
 
 <template>
-  <AppFooterTop />
+  <!-- <AppFooterTop /> -->
   <AppFooterBottom />
 </template>
 
