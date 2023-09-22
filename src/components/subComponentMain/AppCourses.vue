@@ -96,14 +96,12 @@ export default {
 <style lang="scss" scoped>
 .bg {
   position: relative;
-  .ciao {
-    transition: width 0.5s linear;
-  }
+
   // background-color: white;
   &::before {
     content: "";
     // image triangolare
-    clip-path: polygon(0% 0%, 230% 50%, 50% 100%, -60% 70%);
+    clip-path: polygon(0% 0%, 230% 0%, 50% 100%, -60% 50%);
     height: 600px;
     background-image: url("/img/promise-background.jpg");
     background-size: cover;
