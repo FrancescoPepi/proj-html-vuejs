@@ -127,7 +127,7 @@ header {
   position: fixed;
   left: 0;
   right: 0;
-  z-index: 2;
+  z-index: 5;
 }
 .bg-top {
   background-color: #353637;
