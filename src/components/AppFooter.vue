@@ -9,20 +9,10 @@ export default {
     };
   },
 
-  // 	methods:{
-  // 		myMethods(){
-  // 			...
-  // 		},
-  // 	},
-
   components: {
     AppFooterTop,
     AppFooterBottom,
   },
-
-  // 	props:{
-  // 		passaggioInfo: stringa,
-  //  	 },
 };
 </script>
 

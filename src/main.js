@@ -20,6 +20,7 @@ import {
   faPhone,
   faHouse,
   faLink,
+  faLayerGroup,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebookF,
@@ -45,7 +46,8 @@ library.add(
   faHouse,
   faLink,
   faEnvelope,
-  faCircleRight
+  faCircleRight,
+  faLayerGroup
 );
 
 const app = createApp(App);
