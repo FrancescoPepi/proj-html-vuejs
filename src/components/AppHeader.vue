@@ -124,9 +124,10 @@ export default {
 
 header {
   font-weight: 900;
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
+  z-index: 2;
 }
 .bg-top {
   background-color: #353637;
@@ -153,9 +154,7 @@ header {
     }
   }
 }
-.header-bottom {
-  @include flex();
-}
+
 .new {
   margin-left: 3px;
   background-color: #7abc64;

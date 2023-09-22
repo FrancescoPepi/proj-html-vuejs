@@ -73,6 +73,7 @@ export default {
   display: flex;
   flex-direction: column;
   position: fixed;
+  z-index: 4;
   right: 5px;
   top: 10%;
   h3 {
